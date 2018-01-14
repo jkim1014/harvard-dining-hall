@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    personal_info
+{% endblock %}
+
+{% block main %}
+    <style type="text/css">
+    	.profile {
+    	    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    	    max-width: 500px;
+    	    margin: auto;
+    	    text-align: center;
+    	    background-color: lightgrey;
+    	}
+    </style>
+
+    <div class="profile">
+        <h1><b>Name:  </b>{{name}}</h1>
+        <p><b>Age:  </b>{{age}}</p>
+        <p><b>Height:  </b>{{height}}</p>
+        <p><b>Weight:  </b>{{weight}}</p>
+        <p><b>Gender:  </b>{{gender}}</p>
+    </div>
+
+    <div style="text-align:center">
+        Want to <a href="/update_personal_info">Update</a> Info?
+    </div>
+
+    </br>
+
+    <h1>Meal History</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Time</td>
+                <td>Calories</td>
+                <td>Protein</td>
+                <td>Fat</td>
+                <td>Carbs</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for meal in meals %}
+                <tr>
+                    <td>{{meal.time}}</td>
+                    <td>{{meal.calories}}</td>
+                    <td>{{meal.protein}}</td>
+                    <td>{{meal.fat}}</td>
+                    <td>{{meal.carbs}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}8
+    Nutrition
+{% endblock %}
+
+{% block main %}
+<h1>Your Meal's Nutrients</h1>
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <td>Calories</td>
+              <td>Protein</td>
+              <td>Fat</td>
+              <td>Carbs</td>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>{{calories}}</td>
+            <td>{{protein}}</td>
+            <td>{{fat}}</td>
+            <td>{{carbs}}</td>
+        </tr>
+      </tbody>
+  </table>
+{% endblock %}

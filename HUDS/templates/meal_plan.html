@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    meal_plan
+{% endblock %}
+
+{% block main %}
+    <form action="/nutrition" method="post">
+        <h2>Today's Menu!</h2>
+        <div class="form-group">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Serving Size</td>
+                        <td>Calories</td>
+                        <td>Protein</td>
+                        <td>Fat</td>
+                        <td>Carbs</td>
+                        <td>Quantity</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in all %}
+                        <tr>
+                            <td>{{post.name}}</td>
+                            <td>{{post.servingSize}}</td>
+                            <td>{{post.calories}}</td>
+                            <td>{{post.protein}}</td>
+                            <td>{{post.fat}}</td>
+                            <td>{{post.carbs}}</td>
+                            <td><input id="{{post.name}}" type="number" name="{{post.name}}"/></td>
+                        </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-primary" type="submit">Calculate Nutrition</button>
+    </form>
+{% endblock %}

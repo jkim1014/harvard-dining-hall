@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<section class="fdb-block">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1>Welcome to Annenberg Helper!</h1>
+                <h2>Click Below to Use:</h2>
+            </div>
+        </div>
+        <div class="row pt-4">
+            <div class="col">
+                <h4 style="text-align: center">Meal Planner</h4>
+                <a class="nav-link" href="/meal_plan">
+                    <img alt="Meal Planner" class="img-fluid" src="http://anneshk.wpengine.netdna-cdn.com/wp-content/uploads/2013/04/USDA-food-pyramid-s.png">
+                </a>
+            </div>
+            <div class="col">
+                <h4 style="text-align: center">Personal Information</h4>
+                <a class="nav-link" href="/personal_info">
+                    <img alt="Personal Info" class="img-fluid" src="https://static1.squarespace.com/static/59a5702b49fc2b0fce33650e/t/59b92558c534a5f81440e8cd/1505305962305/Generic-Profile-1600x1600.png">
+                </a>
+            </div>
+            <div class="col">
+                <h4 style="text-align: center">Table Helper</h4>
+                <a class="nav-link" href="/table_helper">
+                    <img alt="Table Helper" class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Annenberg_Hall%2C_Memorial_Hall%2C_Harvard.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

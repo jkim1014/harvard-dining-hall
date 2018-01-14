@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Personal Information
+{% endblock %}
+
+{% block main %}
+    <form action="/update_personal_info" method="post">
+        <h4>Update the Information That's Changed!</h4>
+        <div class="form-group">
+            <input class="form-control" name="age" placeholder="Age" type="number"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="height" placeholder="Height (in.)" type="number"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="weight" placeholder="Weight (lbs.)" type="number"/>
+        </div>
+        </br>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

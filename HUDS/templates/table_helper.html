@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+    <form action="/table_helper" method="post">
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="table" placeholder="Table" type="text"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Publish</button>
+    </form>
+    <br/>
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Table</td>
+                    <td>Time</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in all %}
+                    <tr>
+                        <td>{{post.name}}</td>
+                        <td>{{post.table}}</td>
+                        <td>{{post.time}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
